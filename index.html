@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Inspiring quotes</title>
+
+        <style>
+        body {
+            background-color: rgb(209, 209, 209);
+            margin-top: 100px;
+            text-align: center;
+            font-size: 40px;
+            color: rgb(80, 80, 80);
+        }
+        </style>
+    </head>
+    <body>
+        <p id="content"></p>
+
+        <script>
+            var quotes = [
+                {text: "Woof", author: "Dog"},
+                {text: "Meow", author: "Cat"},
+                {text: "Moo",  author: "Cow"},
+                {text: "Oink", author: "Pig"}
+            ];
+            let selectedQuote = quotes[Math.floor(Math.random() * quotes.length)];
+            document.getElementById("content").innerHTML =
+                "<q>" + selectedQuote.text + "</q>" +
+                "&mdash;" + selectedQuote.author;
+        </script>
+    </body>
+</html>
